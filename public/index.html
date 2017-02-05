@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+  var worker;
+  if(window.Worker) {
+    console.log(window.Worker)
+    worker = new Worker('worker.js')
+    
+    console.log('booting web worker computation')
+    
+    worker.postMessage('do some work')
+
+    console.log('continue browser run time!')
+  }
+
+  
+</script>
+<h1> web worker test</h1>
+</body>
+</html>
